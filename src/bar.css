@@ -1,0 +1,9 @@
+.bar-container {
+    width: 100px;
+    height: 90vh;
+    border: solid medium white;
+    border-radius: 30px;
+    margin: 10px 10px;
+    text-align: center;
+    color: white;
+}

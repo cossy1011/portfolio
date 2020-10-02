@@ -8578,6 +8578,13 @@ react-particles-js@^3.3.0:
     lodash "^4.17.11"
     tsparticles "^1.17.1"
 
+react-sal@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-sal/-/react-sal-0.0.1.tgz#63b7618e98be90c4f3f46a32b9a2e259173f81ed"
+  integrity sha512-u8uFgGTxnRFutbKoYP2SJI9Ck9fHNJJXULp+mTBwxrMIUbmeI6lRtXl/TNsUUc3H1nMPY1kQRwbx7jm9jtGBwQ==
+  dependencies:
+    sal.js "^0.7.1"
+
 react-scripts@3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-3.4.3.tgz#21de5eb93de41ee92cd0b85b0e1298d0bb2e6c51"
@@ -9081,6 +9088,16 @@ safe-regex@^1.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+
+sal.js@^0.7.1:
+  version "0.7.8"
+  resolved "https://registry.yarnpkg.com/sal.js/-/sal.js-0.7.8.tgz#8916bbe9434b7ee5d71b2c442ff07257d83b5104"
+  integrity sha512-u0ZMxQzLx667NsW4vIt1/hhvNimI/93jlV2blzy6+44UihO6Z4r9JZeaLpOnFnlGBSmhZr3MZ+rn94T5fMuEcQ==
+
+sal.js@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/sal.js/-/sal.js-0.8.1.tgz#048da283fe24170061287785c9757ae368f04b8b"
+  integrity sha512-/4xIjWtFgPRf7WgO2cI4L1jE1O5MKgZmLjF1AJxvLV4QnB29585ocyv1atjOGnhV+seD4O7oOWJo6DvgJSKz4g==
 
 sane@^4.0.3:
   version "4.1.0"
