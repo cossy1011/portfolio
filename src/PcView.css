@@ -1,0 +1,15 @@
+.container {
+    margin: 0;
+    padding: 0;
+    overflow-x: scroll;
+    height: 100vh;
+    width: 500vw;
+    display: flex;
+    flex-direction: row;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .container::-webkit-scrollbar {
+      display:none;
+  }
