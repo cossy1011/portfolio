@@ -1,11 +1,11 @@
 import React from 'react';
-import Particles from "react-particles-js";
-import "./MobileView.css"
 import styled, { keyframes } from 'styled-components';
+import { Reset } from "styled-reset";
+
+import Background from "./Background";
+import "./MobileView.css";
 
 function MobileView() {
-    let client_w = document.getElementById('root').clientWidth;
-    let client_h = document.getElementById('root').clientHeight;
     
     const fadeIn = keyframes`
         0% {
@@ -20,7 +20,7 @@ function MobileView() {
 
     const FadeInTitle = styled.span`
         font-family: "GT-Sectra-Fine","Microsoft Yahei","微软雅黑", STXihei, "华文细黑", serif;
-        color: white;
+        color: black;
         animation: ${props => props.random}s ${fadeIn} ease-out;
     `
 
@@ -37,6 +37,8 @@ function MobileView() {
 
   return (
     <div>
+        <Reset />
+        <Background />
         <h1
             style={{
             color: "#FFFFFF",
@@ -50,42 +52,6 @@ function MobileView() {
         }}>
             {TitleList}
         </h1>
-      <Particles
-        width="100vw"
-        height="100vh"
-        params={{
-          "fps_limit": 28,
-          "particles": {
-              "collisions": {
-                  "enable": false
-              },
-              "number": {
-                  "value": (client_w + client_h) / 12,
-                  "density": {
-                      "enable": false
-                  }
-              },
-              "line_linked": {
-                  "enable": true,
-                  "distance": 200,
-                  "opacity": 0.3
-              },
-              "move": {
-                  "speed": 2
-              },
-              "opacity": {
-                  "anim": {
-                      "enable": true,
-                      "opacity_min": 0.05,
-                      "speed": 1,
-                      "sync": false
-                  },
-                  "value": 0.3
-              }
-          },
-          "retina_detect": false,
-        }}
-      />
     </div>
   );
 }
