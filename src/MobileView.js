@@ -19,7 +19,7 @@ function MobileView() {
     `
 
     const FadeInTitle = styled.span`
-        color: black;
+        color: gray;
         animation: ${props => props.random}s ${fadeIn} ease-out;
     `
 
