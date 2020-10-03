@@ -1,6 +1,9 @@
-import React  from 'react';
-import "./MobileView.css"
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { Reset } from "styled-reset";
+
+import Background from "./Background";
+import "./MobileView.css";
 
 function MobileView() {
     
@@ -17,7 +20,7 @@ function MobileView() {
 
     const FadeInTitle = styled.span`
         font-family: "GT-Sectra-Fine","Microsoft Yahei","微软雅黑", STXihei, "华文细黑", serif;
-        color: white;
+        color: black;
         animation: ${props => props.random}s ${fadeIn} ease-out;
     `
 
@@ -34,6 +37,8 @@ function MobileView() {
 
   return (
     <div>
+        <Reset />
+        <Background />
         <h1
             style={{
             color: "#FFFFFF",
