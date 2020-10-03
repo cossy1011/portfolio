@@ -23,15 +23,16 @@ function MobileView() {
         animation: ${props => props.random}s ${fadeIn} ease-out;
     `
 
-    const Title = ["C", "o", "m", "i", "n", "g", "", "S", "o", "o", "n", "..."]
+    const Title_coming = ["C", "o", "m", "i", "n", "g", "", "S", "o", "o", "n", "..."]
+    const Title_cossy = ["C", "o", "s", "s", "y"]
 
     var TitleList = [];
-    for(let i = 0; i < Title.length; i++){
+    for(let i = 0; i < Title_cossy.length; i++){
         var random = Math.random() * 2 + 1;
         var tempProps = {
             random: random
         }
-        TitleList.push(<FadeInTitle {...tempProps}>{Title[i]}</FadeInTitle>);
+        TitleList.push(<FadeInTitle {...tempProps}>{Title_cossy[i]}</FadeInTitle>);
     }
 
   return (

@@ -17,7 +17,6 @@ function PcView() {
     `
   
     const FadeInTitle = styled.span`
-      color: white;
       animation: ${props => props.random}s ${fadeIn} ease-out;
     `
   
@@ -25,7 +24,7 @@ function PcView() {
   
     var TitleList = [];
     for(let i = 0; i < Title.length; i++){
-      var random = Math.random() * 2 + 1;
+      var random = i * 0.2 + 0.5;
       var tempProps = {
         random: random
       }
@@ -37,17 +36,16 @@ function PcView() {
         <div 
           className="scroll"
           style={{
+            color: "white",
             height:"100vh",
             width: "100vw",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexDirection: "column",
         }}>
-          <h1 style={{
-            letterSpacing: "1rem",
-          }}>
-            {TitleList}
-          </h1>
+          <p style={{fontSize: "4rem", letterSpacing: "2rem",}}>Cossy</p>
+          <p style={{fontSize: "2rem", letterSpacing: "1rem",}}>{TitleList}</p>
         </div>
         <ResumeView />
       </div>
