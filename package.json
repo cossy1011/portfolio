@@ -9,7 +9,6 @@
     "cannon": "^0.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-particles-js": "^3.3.0",
     "react-sal": "^0.0.1",
     "react-scripts": "3.4.3",
     "react-three-fiber": "^5.0.3",
