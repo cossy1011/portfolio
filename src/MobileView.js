@@ -19,7 +19,6 @@ function MobileView() {
     `
 
     const FadeInTitle = styled.span`
-        font-family: "GT-Sectra-Fine","Microsoft Yahei","微软雅黑", STXihei, "华文细黑", serif;
         color: black;
         animation: ${props => props.random}s ${fadeIn} ease-out;
     `

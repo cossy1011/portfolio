@@ -1,5 +1,5 @@
 import React from 'react';
-import Bar from './bar';
+import ResumeView from './ResumeView';
 import styled, { keyframes } from 'styled-components';
 import "./PcView.css";
 
@@ -17,17 +17,11 @@ function PcView() {
     `
   
     const FadeInTitle = styled.span`
-      font-family: "GT-Sectra-Fine","Microsoft Yahei","微软雅黑", STXihei, "华文细黑", serif;
       color: white;
       animation: ${props => props.random}s ${fadeIn} ease-out;
     `
   
     const Title = ["→", "s", "c", "r", "o", "l", "l"]
-  
-    var Agelist = [];
-    for(let i = 0; i < 25; i++){
-      Agelist.push(<Bar num={i}/>);
-    }
   
     var TitleList = [];
     for(let i = 0; i < Title.length; i++){
@@ -55,7 +49,7 @@ function PcView() {
             {TitleList}
           </h1>
         </div>
-        {Agelist}
+        <ResumeView />
       </div>
     );
   }
