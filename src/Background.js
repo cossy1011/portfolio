@@ -104,34 +104,34 @@ const  Swarm = ({ count, mouse, isVisible }) => {
     if (isVisible) {
         return (
         <>
-            <pointLight ref={light} distance={20} intensity={8} color="lightblue" />
             <instancedMesh ref={mesh} args={[null, null, count]}>
-                <bufferGeometry attach='geometry'>
-                    {/* <bufferAttribute
-                        attachObject={['attributes', 'position']}
-                        count={positions.length / 3}
-                        array={new Float32Array(positions)}
-                        itemSize={3}
-                    />
-                    <bufferAttribute
-                        attachObject={['attributes', 'color']}
-                        count={colors.length / 4}
-                        array={new Uint8Array(colors)}
-                        itemSize={4}
-                        normalized
-                    /> */}
-                </bufferGeometry>
-            <sphereBufferGeometry attach="geometry" args={[0.2, 10]} />
-            <meshStandardMaterial attach="material" color="#ff00ff" />
+            <sphereBufferGeometry attach="geometry" args={[0.00001, 0]} />
+            <meshStandardMaterial attach="material" color="white" />
             </instancedMesh>
         </>
         )
     } else {
         return (
             <>
+                <pointLight ref={light} distance={20} intensity={8} color="lightblue" />
                 <instancedMesh ref={mesh} args={[null, null, count]}>
+                    <bufferGeometry attach='geometry'>
+                        {/* <bufferAttribute
+                            attachObject={['attributes', 'position']}
+                            count={positions.length / 3}
+                            array={new Float32Array(positions)}
+                            itemSize={3}
+                        />
+                        <bufferAttribute
+                            attachObject={['attributes', 'color']}
+                            count={colors.length / 4}
+                            array={new Uint8Array(colors)}
+                            itemSize={4}
+                            normalized
+                        /> */}
+                    </bufferGeometry>
                 <sphereBufferGeometry attach="geometry" args={[0.2, 10]} />
-                <meshStandardMaterial attach="material" color="black" />
+                <meshStandardMaterial attach="material" color="#ff00ff" />
                 </instancedMesh>
             </>
         )
@@ -145,7 +145,7 @@ const Background = () => {
     
     return (
         <Container>
-            <Canvas camera={{ position: [0, 0, -12]}}>
+            <Canvas camera={{ position: [0, 0, -12]}} >
                 <ambientLight intensity={1} />
                 <spotLight
                     intensity={0.6}
@@ -156,7 +156,7 @@ const Background = () => {
                 />
                 <Provider>
                     <Plane position={[0, 0, -10]} isVisible={isVisible}/>
-                    <Ball position={[0, 0, 10]} args={[1, 50, 50]} isVisible={isVisible}/>
+                    <Ball position={[0, 0, 10]} args={[1, 50, 50]} isVisible={isVisible} />
                 </Provider>
                 <Swarm mouse={mouse} count={20000} isVisible={isVisible} />
             </Canvas>
