@@ -140,7 +140,7 @@ const  Swarm = ({ count, mouse, isVisible }) => {
 
 
 const Background = () => {
-    const [ isVisible, setVisible ] = useState(false)
+    const [ isVisible, setVisible ] = useState(true)
     const mouse = useRef([0, 0])
     
     return (
