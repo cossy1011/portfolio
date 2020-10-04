@@ -53,7 +53,8 @@ const Plane = ({ position, isVisible }) => {
     } 
 };
 
-const  Swarm = ({ count, mouse, isVisible }) => {
+const  Swarm = ({ mouse, isVisible }) => {
+    const count = isVisible ? 0 : 20000
     const mesh = useRef()
     const light = useRef()
 
@@ -158,7 +159,7 @@ const Background = () => {
                     <Plane position={[0, 0, -10]} isVisible={isVisible}/>
                     <Ball position={[0, 0, 10]} args={[1, 50, 50]} isVisible={isVisible} />
                 </Provider>
-                <Swarm mouse={mouse} count={20000} isVisible={isVisible} />
+                <Swarm mouse={mouse} isVisible={isVisible} />
             </Canvas>
         </Container>
     )
